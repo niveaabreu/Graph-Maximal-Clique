@@ -30,16 +30,16 @@ vector<vector<int>> LerGrafo(const string& nomeArquivo, int& numVertices) {
 vector<int> CliqueMaxima(vector<vector<int>> &grafo, int numeroVertices){
     vector<int> cliqueMaxima;
     vector<int> candidatos;
-    for (int i = 0; i < numVertices; i++){
+    for (int i = 0; i < numeroVertices; i++){
         candidatos.push_back(i);
     }
 
     while (candidatos.size()>0){
-        v=candidatos[candidatos.size()-1];
+        int v=candidatos[candidatos.size()-1];
         candidatos.pop_back();
         bool podeAdicionar=true;
 
-        for(int i = 0; u < cliqueMaxima.size(); i++){
+        for(int i = 0; i < cliqueMaxima.size(); i++){
             int u = cliqueMaxima[i];
             if(grafo[u][v]==0){
                 podeAdicionar=false;
@@ -75,7 +75,7 @@ vector<int> CliqueMaxima(vector<vector<int>> &grafo, int numeroVertices){
 int main(){
     vector<vector<int>> grafo;
     int numVertices;
-    grafo = LerGrafo("grafo.txt", int& numVertices);
+    grafo = LerGrafo("grafo.txt", numVertices);
     vector<int> cliquemaxima = CliqueMaxima(grafo,numVertices);
     for(int elemento:cliquemaxima){
         cout << elemento << " ";
