@@ -1,7 +1,7 @@
 import networkx as nx
 
 # Nome do arquivo de entrada
-nome_arquivo = "seu_arquivo.txt"
+nome_arquivo = "grafo.txt"
 
 # Abrir o arquivo e pular a primeira linha
 with open(nome_arquivo, 'r') as arquivo:
