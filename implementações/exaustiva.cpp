@@ -46,7 +46,7 @@ bool ehClique(vector<int>& candidatos, vector<vector<int>>& grafo) {
 void EncontraCliques(vector<vector<int>>& grafo, vector<int>& candidatos, vector<int>& cliqueMaximal) {
     stack<pair<vector<int>, vector<int>>> pilhaCliques;
 
-    for (int i = 0; i < candidatos.size(); ++i) {
+    for (size_t i = 0; i < candidatos.size(); ++i) {
         vector<int> cliqueAtual;
         vector<int> candidatosAtuais(candidatos.begin() + i + 1, candidatos.end());
 
